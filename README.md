@@ -1,6 +1,3 @@
-# SamuraiMovieDB
-Samurai Movie Database 
-
 # Project: Samurai Movie Portfolio Website
 
 **Goal:** To create a basic web application using ASP.NET Core Razor Pages, EF Core, and SQLite to manage and display a database of samurai movies. This project serves as a portfolio piece demonstrating C#/.NET backend development skills, including database interaction, basic authentication, and CRUD operations.
