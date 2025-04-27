@@ -60,7 +60,7 @@
 - [x] Configure EF Core for SQLite connection in `appsettings.json` and `Program.cs`.
 - [x] Add EF Core migrations to create the initial database schema (`Movies` table).
 - [x] Apply migrations (`dotnet ef database update`).
-- [ ] Optional: Implement basic data seeding for initial movies.
+- [x] Optional: Implement basic data seeding for initial movies.
 
 ## Phase 2: Public Viewing & Searching
 - [ ] Create/Modify Razor Page (`Index.cshtml`) to display all movies in an HTML table.
