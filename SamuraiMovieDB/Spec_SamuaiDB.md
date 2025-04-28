@@ -68,6 +68,11 @@
 - [x] Add search form UI to the Index page (inputs for Name, Year, Director, Color, Description).
 - [x] Implement server-side search logic in the PageModel to filter movies based on criteria.
 - [ ] Display filtered search results on the Index page.
+- [ ] Update the website landing page header to include:
+- [ ] "Samurai Movie Database" (static title, not a link).
+- [ ] "Search" (link to the search page).
+- [ ] "Contribute" (link to a page for contributing to the database).
+- [ ] Remove the "Privacy" link.
 - [ ] OPTIONAL Use Bootstrap classes (already included in your project) to make the form look clean and professional.
 
 ## Phase 3: Admin Authentication Setup
