@@ -9,6 +9,10 @@ namespace SamuraiMovieDB.Data
     // Inherits from `IdentityDbContext<IdentityUser>` to include ASP.NET Core Identity functionality.
     public class ApplicationDbContext : IdentityDbContext<IdentityUser>
     {
+        public ApplicationDbContext()
+        {
+        }
+
         // Constructor that accepts options for configuring the database context.
         // These options are typically provided by the dependency injection system.
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)

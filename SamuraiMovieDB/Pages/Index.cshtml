@@ -4,7 +4,30 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Year</th>
+            <th>Director</th>
+            <th>Color</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+
+
+    @* Replace 'Movies' with the actual collection name in the PageModel *@
+    @foreach (var movie in Model.Movies)
+    {
+        <tr>
+            <td>@movie.Name</td>
+            <td>@movie.Year</td>
+            <td>@movie.Director</td>
+            <td>@(movie.Color ? "Color" : "B&W")</td>
+            <td>@movie.Description</td>
+         </tr>
+      
+    }
+    </tbody>
+</table>
