@@ -1,8 +1,44 @@
 ﻿@page
-@model IndexModel
+@model SamuraiMovieDB.Pages.IndexModel
 @{
     ViewData["Title"] = "Home page";
 }
+
+<form method="get">
+    <div class="form-group">
+        <label for="Name">Name</label>
+        <input type="text" id="Name" name="Name" class="form-control" value="@Model.Name" />  
+    </div>
+    <div class="form-group">
+        <label for="Year">Year</label>
+        <input type="number" id="Year" name="Year" class="form-control" value="@Model.Year" />
+    </div>
+    <div class="form-group">
+        <label for="Director">Director</label>
+        <input type="text" id="Director" name="Director" class="form-control" value="@Model.Director" />
+    </div>
+    <div class="form-group">
+        <label for="Color">Color</label>
+        <select id="Color" name="Color" class="form-control">
+            <option value="">Any</option>
+            <option value="true" selected="@(Model.Color == true)">Color</option>
+            <option value="false" selected="@(Model.Color == false)">B&W</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="Description">Description</label>
+        <input type="text" id="Description" name="Description" class="form-control" value="@Model.Description" />
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+<h2>Movies</h2>
+<ul>
+    @foreach (var movie in Model.Movies)
+    {
+        <li>@movie.Name (@movie.Year) - Directed by @movie.Director</li>
+    }
+</ul>
 
 <table class="table">
     <thead>
@@ -14,9 +50,8 @@
             <th>Description</th>
         </tr>
     </thead>
+
     <tbody>
-
-
     @* Replace 'Movies' with the actual collection name in the PageModel *@
     @foreach (var movie in Model.Movies)
     {

@@ -13,6 +13,11 @@ public class IndexModel : PageModel // Represents the model for the Index Razor 
 
     // Property to hold the list of movies retrieved from the database.
     public List<Movie> Movies { get; set; } = new List<Movie>();
+    public string? Name { get; set; }
+    public int? Year { get; set; }
+    public string? Director { get; set; }
+    public bool? Color { get; set; }
+    public string? Description { get; set; }
 
     // Constructor to initialize the logger and database context via dependency injection.
     public IndexModel(ILogger<IndexModel> logger, ApplicationDbContext context)
@@ -22,14 +27,41 @@ public class IndexModel : PageModel // Represents the model for the Index Razor 
     }
 
     // Method that is executed when the page is accessed via an HTTP GET request.
-    public void OnGet()
+    public void OnGet(string? name, int? year, string? director, bool? color, string? description)
     {
-        // Create a new instance of the database context (this is unnecessary since _context is already injected).
-        // This approach can lead to issues such as multiple context instances being created.
-        using (var context = new ApplicationDbContext())
+        Name = name;
+        Year = year;
+        Director = director;
+        Color = color;
+        Description = description;
+
+        // Fetch movies from the database 
+        var query = _context.Movies.AsQueryable();
+        if (!string.IsNullOrEmpty(Name))
         {
-            // Retrieve all movies from the database and assign them to the Movies property.
-            Movies = context.Movies.ToList();
+            query = query.Where(m => m.Name != null && m.Name.Contains(Name));
         }
+
+        if (Year.HasValue)
+        {
+            query = query.Where(m => m.Year == Year.Value);
+        }
+
+        if (!string.IsNullOrEmpty(Director))
+        {
+            query = query.Where(m => m.Director != null && m.Director.Contains(Director));
+        }
+
+        if (Color.HasValue)
+        {
+            query = query.Where(m => m.Color == Color.Value);
+        }
+
+        if (!string.IsNullOrEmpty(Description))
+        {
+            query = query.Where(m => m.Description != null && m.Description.Contains(Description));
+        }
+
+        Movies = query.ToList();
     }
 }
