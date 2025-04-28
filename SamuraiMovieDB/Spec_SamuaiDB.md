@@ -67,7 +67,7 @@
 - [x] Implement data fetching logic in the PageModel (`Index.cshtml.cs`) using EF Core.
 - [x] Add search form UI to the Index page (inputs for Name, Year, Director, Color, Description).
 - [x] Implement server-side search logic in the PageModel to filter movies based on criteria.
-- [ ] Display filtered search results on the Index page.
+- [x] Display filtered search results on the Index page.
 - [ ] Update the website landing page header to include:
 - [ ] "Samurai Movie Database" (static title, not a link).
 - [ ] "Search" (link to the search page).
