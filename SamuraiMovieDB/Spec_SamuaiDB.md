@@ -66,7 +66,7 @@
 - [x] Create/Modify Razor Page (`Index.cshtml`) to display all movies in an HTML table.
 - [x] Implement data fetching logic in the PageModel (`Index.cshtml.cs`) using EF Core.
 - [x] Add search form UI to the Index page (inputs for Name, Year, Director, Color, Description).
-- [ ] Implement server-side search logic in the PageModel to filter movies based on criteria.
+- [x] Implement server-side search logic in the PageModel to filter movies based on criteria.
 - [ ] Display filtered search results on the Index page.
 - [ ] OPTIONAL Use Bootstrap classes (already included in your project) to make the form look clean and professional.
 
