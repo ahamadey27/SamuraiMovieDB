@@ -211,7 +211,6 @@ C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\obj\Debug\net9.0\c
 C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\obj\Debug\net9.0\compressed\nezrqnk58p-muycvpuwrr.gz
 C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\obj\Debug\net9.0\compressed\v0zgfp0y55-87fc7y1x7t.gz
 C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\obj\Debug\net9.0\compressed\yfc7ypekbg-mlv21k5csn.gz
-C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\obj\Debug\net9.0\compressed\qi6gsg8sv1-b9sayid5wm.gz
 C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\obj\Debug\net9.0\compressed\c04crr8ab6-61n19gt1b8.gz
 C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\obj\Debug\net9.0\compressed\pej5x90trv-xtxxf3hu2r.gz
 C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\obj\Debug\net9.0\compressed\jefgra9a06-bqjiyaj88i.gz
@@ -290,3 +289,4 @@ C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\obj\Debug\net9.0\r
 C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\obj\Debug\net9.0\SamuraiMovieDB.pdb
 C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\obj\Debug\net9.0\SamuraiMovieDB.genruntimeconfig.cache
 C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\obj\Debug\net9.0\ref\SamuraiMovieDB.dll
+C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\obj\Debug\net9.0\compressed\qi6gsg8sv1-e1gnf3rs84.gz

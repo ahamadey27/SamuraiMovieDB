@@ -8,8 +8,13 @@ html {
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #8B0000;
+  /* Muted red for focus effects */
 }
 
 html {
@@ -18,14 +23,107 @@ html {
 }
 
 body {
+  background-color: #1C1C1C;
+  /* Deep gray for a cinematic backdrop */
+  color: #EDEDED;
+  /* Light gray for text to contrast with the dark background */
   margin-bottom: 60px;
+  font-family: 'Georgia', serif;
+  /* Classic serif font for a traditional feel */
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
+.card {
+  border: 1px solid #8B0000;
+  /* Muted red for card borders */
+  background-color: #2F2F2F;
+  /* Dark gray for card background */
+  color: #EDEDED;
+  /* Light gray for text */
+}
+
+.card-header {
+  background-color: #8B0000;
+  /* Muted red for card headers */
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.table {
+  border: 1px solid #8B0000;
+  /* Muted red for table borders */
+}
+
+.table thead {
+  background-color: #8B0000;
+  /* Muted red for table headers */
+  color: white;
+  text-transform: uppercase;
+}
+
+.table tbody tr:nth-child(odd) {
+  background-color: #2F2F2F;
+  /* Dark gray for alternate rows */
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #1C1C1C;
+  /* Slightly darker gray for alternate rows */
+}
+
+.table tbody tr:hover {
+  background-color: #3F3F3F;
+  /* Highlighted row for hover effect */
+}
+
+.btn-primary {
+  background-color: #8B0000;
+  /* Muted red for buttons */
+  border-color: #8B0000;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.btn-primary:hover {
+  background-color: #A52A2A;
+  /* Slightly lighter red for hover effect */
+  border-color: #A52A2A;
+}
+
+.form-floating>.form-control-plaintext::placeholder,
+.form-floating>.form-control::placeholder {
+  color: #B0B0B0;
+  /* Muted gray for placeholders */
   text-align: end;
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+.form-floating>.form-control-plaintext:focus::placeholder,
+.form-floating>.form-control:focus::placeholder {
   text-align: start;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #EDEDED;
+  /* Light gray for headings */
+  font-family: 'Georgia', serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+a {
+  color: #8B0000;
+  /* Muted red for links */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #A52A2A;
+  /* Slightly lighter red for hover effect */
+  text-decoration: underline;
 }

@@ -68,12 +68,12 @@
 - [x] Add search form UI to the Index page (inputs for Name, Year, Director, Color, Description).
 - [x] Implement server-side search logic in the PageModel to filter movies based on criteria.
 - [x] Display filtered search results on the Index page.
-- [ ] Update the website landing page header to include:
-- [ ] "Samurai Movie Database" (static title, not a link).
-- [ ] "Search" (link to the search page).
-- [ ] "Contribute" (link to a page for contributing to the database).
-- [ ] Remove the "Privacy" link.
-- [ ] OPTIONAL Use Bootstrap classes (already included in your project) to make the form look clean and professional.
+- [x] Update the website landing page header to include:
+- [x] "Samurai Movie Database" (static title, not a link).
+- [x] "Search" (link to the search page).
+- [x] "Contribute" (link to a page for contributing to the database).
+- [x] Remove the "Privacy" link.
+- [x] OPTIONAL Use Bootstrap classes (already included in your project) to make the form look clean and professional.
 
 ## Phase 3: Admin Authentication Setup
 - [ ] Add ASP.NET Core Identity services and EF Core store configuration in `Program.cs`.
@@ -84,14 +84,18 @@
 - [ ] Implement strategy for creating the single admin user (e.g., seeding, temporary registration).
 - [ ] Secure admin credentials using User Secrets during development.
 
-## Phase 4: Admin CRUD Operations
-- [ ] Create an `/Admin` area/folder for protected pages.
-- [ ] Apply `[Authorize]` attribute to Admin pages/folder.
-- [ ] Implement Admin Index page (list movies with Edit/Delete links).
-- [ ] Implement `Create` functionality (Razor Page with form & PageModel handler).
-- [ ] Implement `Edit` functionality (Razor Page with form loading existing data & PageModel handler).
-- [ ] Implement `Delete` functionality (e.g., POST handler with confirmation).
-- [ ] Add navigation links within the Admin area.
+## Phase 4: Public CRUD Operations (No Authentication Required)
+- [ ] Create a "Contribute" Razor Page for adding movies.
+  - Create a Razor Page (`Contribute.cshtml`) with a form for users to input movie details (e.g., Name, Year, Director, Color, Description).
+  - Add logic in the `Contribute.cshtml.cs` PageModel to handle form submissions and save the new movie to the database.
+- [ ] Create an "Edit" Razor Page for updating movies.
+  - Create a Razor Page (`Edit.cshtml`) with a form pre-filled with the details of the selected movie.
+  - Add logic in the `Edit.cshtml.cs` PageModel to handle form submissions and update the movie in the database.
+- [ ] Create a "Delete" Razor Page for removing movies.
+  - Create a Razor Page (`Delete.cshtml`) with a confirmation prompt for deleting a movie.
+  - Add logic in the `Delete.cshtml.cs` PageModel to handle the deletion of a movie from the database.
+- [ ] Update navigation to include links to the "Contribute," "Edit," and "Delete" pages.
+  - Add links to the appropriate places (e.g., the header or movie list) for easy navigation.
 
 ---
 
