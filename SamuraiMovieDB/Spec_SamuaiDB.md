@@ -81,8 +81,8 @@
 - [x] Apply Identity migrations.
 - [x] Scaffold necessary Identity UI pages (Login, Logout, potentially Register initially for user creation).
 - [x] Configure authentication and authorization middleware in `Program.cs`.
-- [ ] Implement strategy for creating the single admin user (e.g., seeding, temporary registration).
-- [ ] Secure admin credentials using User Secrets during development.
+- [x] Implement strategy for creating the single admin user (e.g., seeding, temporary registration).
+- [x] Secure admin credentials using User Secrets during development.
 
 ## Phase 4: Public CRUD Operations (No Authentication Required)
 - [ ] Create a "Contribute" Razor Page for adding movies.
