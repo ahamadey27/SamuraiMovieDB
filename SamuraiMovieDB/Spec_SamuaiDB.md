@@ -76,11 +76,11 @@
 - [x] OPTIONAL Use Bootstrap classes (already included in your project) to make the form look clean and professional.
 
 ## Phase 3: Admin Authentication Setup
-- [ ] Add ASP.NET Core Identity services and EF Core store configuration in `Program.cs`.
-- [ ] Scaffold necessary Identity UI pages (Login, Logout, potentially Register initially for user creation).
-- [ ] Add EF Core migrations for Identity tables.
-- [ ] Apply Identity migrations.
-- [ ] Configure authentication and authorization middleware in `Program.cs`.
+- [x] Add ASP.NET Core Identity services and EF Core store configuration in `Program.cs`.
+- [x] Add EF Core migrations for Identity tables.
+- [x] Apply Identity migrations.
+- [x] Scaffold necessary Identity UI pages (Login, Logout, potentially Register initially for user creation).
+- [x] Configure authentication and authorization middleware in `Program.cs`.
 - [ ] Implement strategy for creating the single admin user (e.g., seeding, temporary registration).
 - [ ] Secure admin credentials using User Secrets during development.
 

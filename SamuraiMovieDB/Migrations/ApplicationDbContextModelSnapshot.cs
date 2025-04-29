@@ -215,7 +215,7 @@ namespace SamuraiMovieDB.Migrations
 
             modelBuilder.Entity("SamuraiMovieDB.Models.Movie", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -237,12 +237,32 @@ namespace SamuraiMovieDB.Migrations
                     b.Property<int>("Year")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("ID");
+                    b.HasKey("Id");
 
                     b.HasIndex("Name", "Year")
                         .IsUnique();
 
                     b.ToTable("Movies");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Color = false,
+                            Description = "Widely regarded as one of the greatest samurai films of all time, 'Seven Samurai' pioneered the now-iconic 'assemble a team' trope. The story follows a group of six seasoned samurai and a seventh, less experienced warrior who band together to defend a village from ruthless bandits. Their heroic efforts lead to victory, but at a tremendous cost, leaving a lasting impact on the villagers and the samurai.",
+                            Director = "Akira Kurosawa",
+                            Name = "Seven Samurai",
+                            Year = 1954
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Color = false,
+                            Description = "'Yojimbo' tells the tale of a wandering samurai who arrives in a village torn apart by two rival gangs. Using his cunning and swordsmanship, he manipulates the gangs against each other to restore peace. This film inspired the 'man with no name' archetype, later popularized in Western cinema by Sergio Leone.",
+                            Director = "Akira Kurosawa",
+                            Name = "Yojimbo",
+                            Year = 1961
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
