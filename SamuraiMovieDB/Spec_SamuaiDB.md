@@ -94,10 +94,8 @@
 - [x] Create a "Delete" Razor Page for removing movies.
 - [x] Create a Razor Page (`Delete.cshtml`) with a confirmation prompt for deleting a movie.
 - [x] Add logic in the `Delete.cshtml.cs` PageModel to handle the deletion of a movie from the database.
-- [ ] Update navigation to include links to the "Contribute," "Edit," and "Delete" pages.
-- [ ] Add links to the appropriate places (e.g., the header or movie list) for easy navigation.
-
----
+- [x] Update navigation to include links to the "Contribute," "Edit," and "Delete" pages.
+- [x] Add links to the appropriate places (e.g., the header or movie list) for easy navigation.
 
 # Testing Checklist (MVP)
 - [ ] Project builds and runs locally without errors.
