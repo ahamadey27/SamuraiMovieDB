@@ -85,17 +85,17 @@
 - [x] Secure admin credentials using User Secrets during development.
 
 ## Phase 4: Public CRUD Operations (No Authentication Required)
-- [ ] Create a "Contribute" Razor Page for adding movies.
+- [x] Create a "Contribute" Razor Page for adding movies.
   - Create a Razor Page (`Contribute.cshtml`) with a form for users to input movie details (e.g., Name, Year, Director, Color, Description).
   - Add logic in the `Contribute.cshtml.cs` PageModel to handle form submissions and save the new movie to the database.
 - [ ] Create an "Edit" Razor Page for updating movies.
-  - Create a Razor Page (`Edit.cshtml`) with a form pre-filled with the details of the selected movie.
-  - Add logic in the `Edit.cshtml.cs` PageModel to handle form submissions and update the movie in the database.
+- [ ] Create a Razor Page (`Edit.cshtml`) with a form pre-filled with the details of the selected movie.
+- [ ] Add logic in the `Edit.cshtml.cs` PageModel to handle form submissions and update the movie in the database.
 - [ ] Create a "Delete" Razor Page for removing movies.
-  - Create a Razor Page (`Delete.cshtml`) with a confirmation prompt for deleting a movie.
-  - Add logic in the `Delete.cshtml.cs` PageModel to handle the deletion of a movie from the database.
+- [ ] Create a Razor Page (`Delete.cshtml`) with a confirmation prompt for deleting a movie.
+- [ ] Add logic in the `Delete.cshtml.cs` PageModel to handle the deletion of a movie from the database.
 - [ ] Update navigation to include links to the "Contribute," "Edit," and "Delete" pages.
-  - Add links to the appropriate places (e.g., the header or movie list) for easy navigation.
+- [ ] Add links to the appropriate places (e.g., the header or movie list) for easy navigation.
 
 ---
 

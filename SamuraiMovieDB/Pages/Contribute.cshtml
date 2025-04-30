@@ -1,0 +1,53 @@
+@page
+@model SamuraiMovieDB.Pages.ContributeModel
+@{
+    ViewData["Title"] = "Contribute Movie";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h4>Add a New Samurai Movie</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6"> {/* Adjust column width as needed */}
+        <form method="post">
+            @* Display model-level validation errors (not tied to a specific field) *@
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="mb-3">
+                <label asp-for="Movie.Name" class="form-label"></label>
+                <input asp-for="Movie.Name" class="form-control" />
+                <span asp-validation-for="Movie.Name" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Movie.Year" class="form-label"></label>
+                <input asp-for="Movie.Year" class="form-control" type="number" />
+                <span asp-validation-for="Movie.Year" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Movie.Director" class="form-label"></label>
+                <input asp-for="Movie.Director" class="form-control" />
+                <span asp-validation-for="Movie.Director" class="text-danger"></span>
+            </div>
+             <div class="mb-3 form-check">
+                <input asp-for="Movie.Color" class="form-check-input" type="checkbox" />
+                <label asp-for="Movie.Color" class="form-check-label"></label>
+                <span asp-validation-for="Movie.Color" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Movie.Description" class="form-label"></label>
+                <textarea asp-for="Movie.Description" class="form-control" rows="3"></textarea>
+                <span asp-validation-for="Movie.Description" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary">Add Movie</button>
+                 <a asp-page="./Index" class="btn btn-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@* Include client-side validation scripts *@
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
