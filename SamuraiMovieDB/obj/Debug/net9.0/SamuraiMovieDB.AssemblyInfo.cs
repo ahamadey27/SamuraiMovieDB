@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SamuraiMovieDB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+596aa2e4a8ea00e649b154ccec55228ca9de3684")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8908e986e52085cb3195d071689927f4ff46e145")]
 [assembly: System.Reflection.AssemblyProductAttribute("SamuraiMovieDB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SamuraiMovieDB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

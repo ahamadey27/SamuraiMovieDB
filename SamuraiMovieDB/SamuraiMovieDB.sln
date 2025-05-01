@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamuraiMovieDB", "SamuraiMo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDWithMySQL", "..\..\CourseraBackendDeveloper\04_DatabaseIntegration\CRUDWithMySQL\CRUDWithMySQL\CRUDWithMySQL.csproj", "{6DB35FFD-D752-410E-A3C3-E302EE818186}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlExercise", "..\..\CourseraBackendDeveloper\04_DatabaseIntegration\SqlExercise\SqlExercise\SqlExercise.csproj", "{140EE43C-199F-482F-81D0-03DD83A396BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,18 @@ Global
 		{6DB35FFD-D752-410E-A3C3-E302EE818186}.Release|x64.Build.0 = Release|Any CPU
 		{6DB35FFD-D752-410E-A3C3-E302EE818186}.Release|x86.ActiveCfg = Release|Any CPU
 		{6DB35FFD-D752-410E-A3C3-E302EE818186}.Release|x86.Build.0 = Release|Any CPU
+		{140EE43C-199F-482F-81D0-03DD83A396BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{140EE43C-199F-482F-81D0-03DD83A396BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{140EE43C-199F-482F-81D0-03DD83A396BA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{140EE43C-199F-482F-81D0-03DD83A396BA}.Debug|x64.Build.0 = Debug|Any CPU
+		{140EE43C-199F-482F-81D0-03DD83A396BA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{140EE43C-199F-482F-81D0-03DD83A396BA}.Debug|x86.Build.0 = Debug|Any CPU
+		{140EE43C-199F-482F-81D0-03DD83A396BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{140EE43C-199F-482F-81D0-03DD83A396BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{140EE43C-199F-482F-81D0-03DD83A396BA}.Release|x64.ActiveCfg = Release|Any CPU
+		{140EE43C-199F-482F-81D0-03DD83A396BA}.Release|x64.Build.0 = Release|Any CPU
+		{140EE43C-199F-482F-81D0-03DD83A396BA}.Release|x86.ActiveCfg = Release|Any CPU
+		{140EE43C-199F-482F-81D0-03DD83A396BA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
