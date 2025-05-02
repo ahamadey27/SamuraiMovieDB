@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization; // <-- ADDED
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore; // For database operations
@@ -7,9 +8,9 @@ using System.Threading.Tasks; // For async methods
 
 namespace SamuraiMovieDB.Pages
 {
+    [Authorize] // <-- ADDED
     public class DeleteModel : PageModel
     {
-        // ... inside DeleteModel class ...
         private readonly ApplicationDbContext _context;
 
         public DeleteModel(ApplicationDbContext context)
@@ -17,11 +18,9 @@ namespace SamuraiMovieDB.Pages
             _context = context;
         }
 
-        // ... inside DeleteModel class ...
         [BindProperty]
         public Movie? Movie { get; set; } // Changed Movie to Movie? and removed '= default!'
 
-        // ... inside DeleteModel class ...
         public async Task<IActionResult> OnGetAsync(int? id) // id comes from the route
         {
             if (id == null)
@@ -39,7 +38,6 @@ namespace SamuraiMovieDB.Pages
             return Page(); // Show the confirmation page with movie details
         }
         
-                // ... inside DeleteModel class ...
         public async Task<IActionResult> OnPostAsync(int? id)
         {
             if (id == null)
@@ -61,7 +59,5 @@ namespace SamuraiMovieDB.Pages
             // redirect back to the Index page.
             return RedirectToPage("./Index");
         }
-
-        // Code goes here
     }
 }

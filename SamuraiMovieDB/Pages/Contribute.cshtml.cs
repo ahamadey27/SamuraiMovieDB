@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization; // <-- ADDED
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using SamuraiMovieDB.Data;
@@ -6,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace SamuraiMovieDB.Pages
 {
+    [Authorize] // <-- ADDED
     public class ContributeModel : PageModel
     {
         private readonly ApplicationDbContext _context;

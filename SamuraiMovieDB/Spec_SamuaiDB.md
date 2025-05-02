@@ -97,25 +97,35 @@
 - [x] Update navigation to include links to the "Contribute," "Edit," and "Delete" pages.
 - [x] Add links to the appropriate places (e.g., the header or movie list) for easy navigation.
 
-# Testing Checklist (MVP)
-- [ ] Project builds and runs locally without errors.
-- [ ] Initial database migration successfully creates `Movies` table schema.
-- [ ] Identity migration successfully creates Identity table schemas.
-- [ ] Public Index page displays seeded/all movies correctly.
-- [ ] Search functionality filters results accurately for:
-    - [ ] Name (partial match)
-    - [ ] Year (exact match)
-    - [ ] Director (partial match)
-    - [ ] Color (boolean match)
-    - [ ] Description (partial match)
-    - [ ] Combination of fields
-    - [ ] Empty search (shows all)
-- [ ] Admin user can log in successfully via the Login page.
-- [ ] Logged-out users are redirected when attempting to access `/Admin` pages.
-- [ ] Admin user can access `/Admin` pages.
-- [ ] Admin can create a new movie, and it appears on the public list.
-- [ ] Admin can edit an existing movie, and changes are reflected on the public list.
-- [ ] Admin can delete a movie, and it is removed from the public list.
-- [ ] Input validation prevents saving invalid data (e.g., missing Name/Year).
-- [ ] Basic deployment to Azure App Service Free Tier works (site is accessible).
-- [ ] Data persists across application restarts on Azure (SQLite DB file is correctly handled).
+# Phase 5: Testing Checklist (MVP)
+- [x] Project builds and runs locally without errors.
+- [x] Initial database migration successfully creates `Movies` table schema.
+- [x] Identity migration successfully creates Identity table schemas.
+- [x] Public Index page displays seeded/all movies correctly.
+- [x] Search functionality filters results accurately for:
+    - [x] Name (partial match)
+    - [x] Year (exact match)
+    - [x] Director (partial match)
+    - [x] Color (boolean match)
+    - [x] Description (partial match)
+    - [x] Combination of fields
+    - [x] Empty search (shows all)
+- [x] Admin user can log in successfully via the Login page.
+- [x] Logged-out users are redirected when attempting to access `/Admin` pages.
+- [x] Admin user can access `/Admin` pages.
+- [x] Admin can create a new movie, and it appears on the public list.
+- [x] Admin can edit an existing movie, and changes are reflected on the public list.
+- [x] Admin can delete a movie, and it is removed from the public list.
+- [x] Input validation prevents saving invalid data (e.g., missing Name/Year).
+
+# Phase 6: Publish Website
+- [ ] Prepare project for release build.
+- [ ] Create Azure App Service (Free Tier) resource.
+- [ ] Deploy application to Azure App Service.
+- [ ] Apply EF Core migrations on Azure.
+- [ ] Verify website functionality and data persistence on Azure.
+
+# General Notes
+---
+- Password: SamuraiMovieDb1!
+- Email: hamadey@gmail.com

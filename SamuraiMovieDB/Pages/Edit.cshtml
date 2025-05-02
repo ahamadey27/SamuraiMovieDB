@@ -1,77 +1,56 @@
-@page "{id:int}" // Defines the route for this page, requiring an integer 'id' parameter (e.g., /Edit/5)
+@page "{id:int}"
 
-@model SamuraiMovieDB.Pages.EditModel // Specifies that this view uses the EditModel PageModel class for its data and logic
+@model SamuraiMovieDB.Pages.EditModel
 
 @{
-    ViewData["Title"] = "Edit Movie"; // Sets the title that appears in the browser tab and potentially the layout
+    ViewData["Title"] = "Edit Movie";
 }
 
-<h1>@ViewData["Title"]</h1> // Displays the main heading using the title set above
+<h1>@ViewData["Title"]</h1>
 
-<h4>Edit Samurai Movie Details</h4> // A subheading for the form section
-<hr /> // A horizontal line for visual separation
+<h4>Edit Samurai Movie Details</h4>
+<hr />
 
-<div class="row"> // Bootstrap row for layout
-    <div class="col-md-6"> // Bootstrap column, limiting the form width
-        <form method="post"> // The HTML form. 'method="post"' means submitting this form will call the OnPostAsync handler in the PageModel
-            
-            @* This div displays validation errors that aren't tied to a specific property (model-level errors) *@
+<div class="row">
+    <div class="col-md-6">
+        <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
-            @* This hidden input holds the ID of the movie being edited. 
-               It's crucial because when the form is POSTed, the model binder uses this ID 
-               along with other form values to reconstruct the Movie object for the OnPostAsync method. *@
             <input type="hidden" asp-for="Movie.Id" />
-
-            @* Form group for the Movie Name *@
-            <div class="mb-3"> // Margin bottom utility class for spacing
-                <label asp-for="Movie.Name" class="form-label"></label> // Generates a <label> tag for the 'Name' property of the Movie model
-                <input asp-for="Movie.Name" class="form-control" /> // Generates an <input> tag bound to the 'Name' property. 'form-control' is for Bootstrap styling.
-                <span asp-validation-for="Movie.Name" class="text-danger"></span> // Generates a <span> tag where validation errors for the 'Name' property will be displayed. 'text-danger' is for Bootstrap error styling.
+            <div class="mb-3">
+                <label asp-for="Movie.Name" class="form-label"></label>
+                <input asp-for="Movie.Name" class="form-control" />
+                <span asp-validation-for="Movie.Name" class="text-danger"></span>
             </div>
-
-            @* Form group for the Movie Year *@
             <div class="mb-3">
                 <label asp-for="Movie.Year" class="form-label"></label>
-                <input asp-for="Movie.Year" class="form-control" type="number" /> // 'type="number"' suggests a numeric input control in the browser
+                <input asp-for="Movie.Year" class="form-control" type="number" />
                 <span asp-validation-for="Movie.Year" class="text-danger"></span>
             </div>
-
-            @* Form group for the Movie Director *@
             <div class="mb-3">
                 <label asp-for="Movie.Director" class="form-label"></label>
                 <input asp-for="Movie.Director" class="form-control" />
                 <span asp-validation-for="Movie.Director" class="text-danger"></span>
             </div>
-
-            @* Form group for the Movie Color (Checkbox) *@
-            <div class="mb-3 form-check"> // 'form-check' is Bootstrap styling for checkboxes/radio buttons
-                <input asp-for="Movie.Color" class="form-check-input" type="checkbox" /> // Generates an <input type="checkbox"> bound to the boolean 'Color' property
+            <div class="mb-3 form-check">
+                <input asp-for="Movie.Color" class="form-check-input" type="checkbox" />
                 <label asp-for="Movie.Color" class="form-check-label"></label>
                 <span asp-validation-for="Movie.Color" class="text-danger"></span>
             </div>
-
-            @* Form group for the Movie Description (Textarea) *@
             <div class="mb-3">
                 <label asp-for="Movie.Description" class="form-label"></label>
-                <textarea asp-for="Movie.Description" class="form-control" rows="3"></textarea> // Generates a <textarea> suitable for longer text input
+                <textarea asp-for="Movie.Description" class="form-control" rows="3"></textarea>
                 <span asp-validation-for="Movie.Description" class="text-danger"></span>
             </div>
-
-            @* Action buttons for the form *@
             <div class="mb-3">
-                <button type="submit" class="btn btn-primary">Save Changes</button> // The submit button triggers the form POST
-                <a asp-page="./Index" class="btn btn-secondary">Cancel</a> // A link styled as a button that navigates back to the Index page without saving
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+                <a asp-page="./Index" class="btn btn-secondary">Cancel</a>
             </div>
         </form>
     </div>
 </div>
 
-@* This section allows adding content to the 'Scripts' section defined in _Layout.cshtml *@
 @section Scripts {
     @{
-        // Renders the partial view containing standard client-side validation scripts (like jQuery Unobtrusive Validation)
-        // This enables validation in the browser before the form is submitted.
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
 }

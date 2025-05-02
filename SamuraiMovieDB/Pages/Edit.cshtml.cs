@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization; // <-- ADDED
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore; // For database operations like FindAsync and Attach/Modified
@@ -8,6 +9,7 @@ using System.Threading.Tasks; // For async methods
 //Define the Class: Create a public class EditModel that inherits from PageModel:
 namespace SamuraiMovieDB.Pages
 {
+    [Authorize] // <-- ADDED
     public class EditModel : PageModel
     {
         //Inject DbContext: Add a private readonly field for ApplicationDbContext and a constructor 

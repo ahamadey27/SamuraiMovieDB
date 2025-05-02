@@ -63,6 +63,7 @@ namespace SamuraiMovieDB.Data
                                   "Using his cunning and swordsmanship, he manipulates the gangs against each other to restore peace. " +
                                   "This film inspired the 'man with no name' archetype, later popularized in Western cinema by Sergio Leone."
                 }
+
             );
         }
     }
