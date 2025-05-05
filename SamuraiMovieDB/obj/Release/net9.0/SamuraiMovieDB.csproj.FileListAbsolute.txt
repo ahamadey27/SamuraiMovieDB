@@ -409,3 +409,12 @@ C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\obj\Release\net9.0
 C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\obj\Release\net9.0\SamuraiMovieDB.pdb
 C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\obj\Release\net9.0\SamuraiMovieDB.genruntimeconfig.cache
 C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\obj\Release\net9.0\ref\SamuraiMovieDB.dll
+C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\bin\Release\net9.0\publish\web.config
+C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\bin\Release\net9.0\publish\appsettings.Development.json
+C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\bin\Release\net9.0\publish\appsettings.json
+C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\bin\Release\net9.0\publish\SamuraiMovieDB.deps.json
+C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\bin\Release\net9.0\publish\SamuraiMovieDB.runtimeconfig.json
+C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\bin\Release\net9.0\publish\SamuraiMovieDB.staticwebassets.endpoints.json
+C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\bin\Release\net9.0\publish\SqlExercise.deps.json
+C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\bin\Release\net9.0\publish\SqlExercise.runtimeconfig.json
+C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\bin\Release\net9.0\Movies.db
