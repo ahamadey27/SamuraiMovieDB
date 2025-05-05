@@ -4,32 +4,48 @@ using SamuraiMovieDB.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 1) Register the SQLite DbContext with a connection string from configuration
+// 1) Register the SQLite DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
 
-// 2) Configure Identity to use EF stores and require confirmed accounts
+// 2) Configure Identity with Roles support
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
-// 3) Add Razor Pages support
+// 3) Add Razor Pages
 builder.Services.AddRazorPages();
 
 var app = builder.Build();
 
-// 4) Apply any pending migrations on startup
+// 4) Apply migrations and seed the admin user
 using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-    try
+    dbContext.Database.Migrate();
+
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+
+    const string adminEmail = "hamadey@gmail.com";
+    const string adminPassword = "SamuraiMovieDb1!";
+
+    // Seed "Admin" role
+    if (roleManager.FindByNameAsync("Admin").GetAwaiter().GetResult() == null)
     {
-        dbContext.Database.Migrate();
+        roleManager.CreateAsync(new IdentityRole("Admin")).GetAwaiter().GetResult();
     }
-    catch (Exception ex)
+
+    // Seed the admin user
+    if (userManager.FindByNameAsync(adminEmail).GetAwaiter().GetResult() == null)
     {
-        var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
-        logger.LogError(ex, "An error occurred while migrating the database.");
+        var adminUser = new IdentityUser { UserName = adminEmail, Email = adminEmail, EmailConfirmed = true };
+        var createResult = userManager.CreateAsync(adminUser, adminPassword).GetAwaiter().GetResult();
+        if (createResult.Succeeded)
+        {
+            userManager.AddToRoleAsync(adminUser, "Admin").GetAwaiter().GetResult();
+        }
     }
 }
 
@@ -44,11 +60,9 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
-// 6) Authentication & Authorization
 app.UseAuthentication();
 app.UseAuthorization();
 
-// 7) Map endpoints
 app.MapStaticAssets();
 app.MapRazorPages().WithStaticAssets();
 
