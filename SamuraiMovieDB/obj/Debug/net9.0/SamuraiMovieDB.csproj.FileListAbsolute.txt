@@ -409,3 +409,9 @@ C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\bin\Debug\net9.0\r
 C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\bin\Debug\net9.0\publish\web.config
+C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\bin\Debug\net9.0\publish\appsettings.Development.json
+C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\bin\Debug\net9.0\publish\appsettings.json
+C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\bin\Debug\net9.0\publish\SamuraiMovieDB.deps.json
+C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\bin\Debug\net9.0\publish\SamuraiMovieDB.runtimeconfig.json
+C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\bin\Debug\net9.0\publish\SamuraiMovieDB.staticwebassets.endpoints.json

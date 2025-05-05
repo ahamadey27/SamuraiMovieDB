@@ -119,9 +119,9 @@
 - [x] Input validation prevents saving invalid data (e.g., missing Name/Year).
 
 # Phase 6: Publish Website
-- [ ] Prepare project for release build.
-- [ ] Create Azure App Service (Free Tier) resource.
-- [ ] Deploy application to Azure App Service.
+- [x] Prepare project for release build.
+- [x] Create Azure App Service (Free Tier) resource.
+- [x] Deploy application to Azure App Service.
 - [ ] Apply EF Core migrations on Azure.
 - [ ] Verify website functionality and data persistence on Azure.
 

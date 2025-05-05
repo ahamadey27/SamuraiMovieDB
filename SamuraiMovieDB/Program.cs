@@ -19,6 +19,25 @@ builder.Services.AddRazorPages();
 
 var app = builder.Build();
 
+// Automatically apply pending EF Core migrations on startup
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    try
+    {
+        dbContext.Database.Migrate(); // Applies pending migrations
+        // Optional: Add seeding logic here if needed after migration
+    }
+    catch (Exception ex)
+    {
+        // Log the error (consider using a proper logging framework)
+        var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, "An error occurred while migrating the database.");
+        // Depending on the severity, you might want to stop the application
+        // throw; 
+    }
+}
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
