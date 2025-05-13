@@ -39,7 +39,7 @@ public class IndexModel : PageModel // Represents the model for the Index Razor 
         var query = _context.Movies.AsQueryable();
         if (!string.IsNullOrEmpty(Name))
         {
-            query = query.Where(m => m.Name != null && m.Name.Contains(Name));
+            query = query.Where(m => m.Name != null && m.Name.ToLower().Contains(Name.ToLower()));
         }
 
         if (Year.HasValue)
@@ -49,7 +49,7 @@ public class IndexModel : PageModel // Represents the model for the Index Razor 
 
         if (!string.IsNullOrEmpty(Director))
         {
-            query = query.Where(m => m.Director != null && m.Director.Contains(Director));
+            query = query.Where(m => m.Director != null && m.Director.ToLower().Contains(Director.ToLower()));
         }
 
         if (Color.HasValue)
@@ -59,7 +59,7 @@ public class IndexModel : PageModel // Represents the model for the Index Razor 
 
         if (!string.IsNullOrEmpty(Description))
         {
-            query = query.Where(m => m.Description != null && m.Description.Contains(Description));
+            query = query.Where(m => m.Description != null && m.Description.ToLower().Contains(Description.ToLower()));
         }
 
         Movies = query.ToList();

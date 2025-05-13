@@ -415,3 +415,4 @@ C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\bin\Debug\net9.0\p
 C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\bin\Debug\net9.0\publish\SamuraiMovieDB.deps.json
 C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\bin\Debug\net9.0\publish\SamuraiMovieDB.runtimeconfig.json
 C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\bin\Debug\net9.0\publish\SamuraiMovieDB.staticwebassets.endpoints.json
+C:\Users\hamad\Documents\GitHub\SamuraiMovieDB\SamuraiMovieDB\bin\Debug\net9.0\Movies.db
